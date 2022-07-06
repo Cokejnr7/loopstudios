@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+    --alata: 'Alata', sans-serif;
+    --josefin: 'Josefin Sans', sans-serif;
+    --paragraph: 15px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+p {
+    font-family: var(--alata);
+    font-size: var(--paragraph);
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+
+
+.mobile-nav {
+    background-color: var(--black);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.mobile-nav>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.logo {
+    margin-left: 40px;
+}
+
+.icon-close {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+/* .mobile-nav-links-ul */
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    list-style-type: none;
+    flex: 4;
+}
+
+/* mobile-nav-links */
+.mobile-nav a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--josefin);
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 40px;
+
+}
+
+
+header {
+    height: 80vh;
+    width: 100%;
+    background-image: url(images/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+header .links {
+    display: none;
+}
+
+.hamburger {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.logo-hamburger {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imm-exp-wrapper {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imm-exp {
+    border: 2px solid var(--white);
+    width: 90%;
+    height: 30%;
+}
+
+.imm-exp>h2 {
+    font-family: var(--josefin);
+    text-transform: uppercase;
+    line-height: 130%;
+    font-size: 30px;
+    color: var(--white);
+    font-weight: 300;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: auto;
+    z-index: 0;
+}
+
+section.one {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    padding: 10%;
+}
+
+section.one h1 {
+    font-family: var(--josefin);
+    font-size: 32px;
+    font-weight: 200;
+    text-align: center;
+    text-justify: inter-word;
+}
+
+section.one img {
+    width: 100%;
+    height: auto;
+}
+
+article {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+section.creations {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: (100px, auto);
+    padding-bottom: 20px;
+    gap: 20px;
+}
+
+section.creations h2 {
+    font-family: var(--josefin);
+    font-size: 23px;
+    font-weight: 200;
+    text-align: center;
+}
+
+section.creations>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.deep-earth {
+    background-image: url(images/mobile/image-deep-earth.jpg);
+
+}
+
+.night-arcade {
+    background-image: url(images/mobile/image-night-arcade.jpg);
+}
+
+
+.soccer-team {
+    background-image: url(images/mobile/image-soccer-team.jpg);
+}
+
+
+.the-grid {
+    background-image: url(images/mobile/image-grid.jpg)
+}
+
+
+.from-up-above {
+    background-image: url(images/mobile/image-from-above.jpg);
+}
+
+.pocket {
+    background-image: url(images/mobile/image-pocket-borealis.jpg);
+}
+
+.the-curiosity {
+    background-image: url(images/mobile/image-curiosity.jpg);
+}
+
+
+.make-it {
+    background-image: url(images/mobile/image-fisheye.jpg);
+}
+
+.deep-earth,
+.make-it,
+.the-curiosity,
+.the-grid,
+.night-arcade,
+.from-up-above,
+.soccer-team,
+.pocket {
+    height: 200px;
+    width: 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button {
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    width: 100px;
+    height: 30px;
+    font-family: var(--alata);
+    font-weight: 400;
+}
+
+section.creations .desktop-button {
+    display: none;
+}
+
+footer {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+footer>ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer>ul>ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    list-style-type: none;
+}
+
+footer a {
+    text-decoration: none;
+    font-family: var(--alata);
+    color: var(--white);
+    text-align: center;
+}
+
+@media screen and (min-width: 375px) {
+    body {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .imm-exp {
+        border: 2px solid var(--white);
+        width: 70%;
+        height: 50%;
+    }
+
+    .imm-exp>h2 {
+        font-family: var(--josefin);
+        text-transform: uppercase;
+        line-height: 130%;
+        font-size: 40px;
+        color: var(--white);
+        font-weight: 300;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    header .links {
+        display: none;
+    }
+
+    header {
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .logo-hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    header .links {
+        list-style-type: none;
+        display: flex;
+        gap: 30px;
+    }
+
+    header a {
+        display: flex;
+        gap: 20px;
+        text-decoration: none;
+        color: var(--white);
+        font-family: var(--alata);
+    }
+
+    section.one {
+        display: flex;
+        flex-direction: row;
+        padding: 10%;
+        position: relative;
+        justify-content: center;
+    }
+
+    section.one img {
+        max-width: 900px;
+        /* width: 100%; */
+        height: auto;
+    }
+
+    article {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        flex-direction: column;
+        position: absolute;
+        align-self: end;
+        background-color: var(--white);
+        height: 350px;
+        width: 40%;
+        right: 0px;
+        bottom: 200px;
+        gap: 20px;
+
+    }
+
+    header {
+        background-image: url(images/desktop/image-hero.jpg);
+        background-size: cover;
+
+    }
+
+    header ul {}
+
+
+    header a {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        /* width: 100%; */
+    }
+
+    header a>li:after {
+        position: absolute;
+    }
+
+    header a:hover::after {
+        transform: scaleX(1);
+    }
+
+    .imm-exp {
+        border: 2px solid var(--white);
+        width: 50%;
+        height: 50%;
+    }
+
+    article p,
+    article h1 {
+        text-align: justify;
+        align-self: start;
+        margin-left: 10%;
+    }
+
+    section.one h1 {
+        font-family: var(--josefin);
+        font-size: 50px;
+        font-weight: 100;
+        text-align: justify;
+        text-justify: newspaper;
+    }
+
+    section.creations {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mobile-button {
+        display: none;
+    }
+
+    section.creations>div {
+        display: grid;
+        width: 90%;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        gap: 10px;
+    }
+
+    section.creations>div>div {
+        height: 600px;
+    }
+
+    .deep-earth {
+        background-image: url(images/desktop/image-deep-earth.jpg);
+
+    }
+
+    .night-arcade {
+        background-image: url(images/desktop/image-night-arcade.jpg);
+    }
+
+
+    .soccer-team {
+        background-image: url(images/desktop/image-soccer-team.jpg);
+    }
+
+
+    .the-grid {
+        background-image: url(images/desktop/image-grid.jpg)
+    }
+
+
+    .from-up-above {
+        background-image: url(images/desktop/image-from-above.jpg);
+    }
+
+    .pocket {
+        background-image: url(images/desktop/image-pocket-borealis.jpg);
+    }
+
+    .the-curiosity {
+        background-image: url(images/desktop/image-curiosity.jpg);
+    }
+
+
+    .make-it {
+        background-image: url(images/mobile/image-fisheye.jpg);
+    }
+
+    section.creations .desktop-button {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    section.one {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        padding: 10%;
+    }
+}
